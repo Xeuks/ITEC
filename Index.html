@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" >
+		<meta name="author" content="Ganeshanathan Sukirthan">
+		
+		<title>Index</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		
+		<link href="css/default.css" type="text/css" rel="stylesheet" title="default">
+		<link href="css/red.css" type="text/css" rel="alternate stylesheet" title="red">
+		<link href="css/orange.css" type="text/css" rel="alternate stylesheet" title="orange">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+		<script src="javascript/PhysicsSimulation.js"></script>
+		<script src="javascript/SiteLoader.js"></script>
+		<script src="javascript/StyleSwitcher.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				applyStartStyleSheet();
+				loadSite('Canvas');
+			});
+		
+		</script>
+		
+		<style>
+			#blackStyleSelector {
+			
+				background-color: black;
+			}
+			
+			#orangeStyleSelector {
+			
+				background-color: orange;
+			}
+			
+			#redStyleSelector {
+				background-color: red;
+			}
+			
+			#styleMenu {
+				margin-left:auto;
+				margin-right: auto;
+				width: 90px;
+				height: 20px;
+			}
+			
+			#styleMenu * {
+				width: 20px;
+				height: 20px;		
+				float:left;
+				margin-left: 1px;
+				
+			}
+		</style>
+	</head>
+	
+	<body>
+			<header>
+				<nav class="w3-topnav w3-black w3-center">
+					<div>
+					<a onclick="loadSite('Canvas');">Canvas</a>
+					<a onclick="loadSite('Form');">Form</a>
+					<a onclick="loadSite('Ajax');">Ajax</a>
+					</div>
+				</nav>				
+			</header>
+			
+			<div class="w3-center">
+				<div>
+					<span id="styleButton" class="w3-opennav w3-xlarge" onclick="showStyleMenu()">&#9776;</span>
+					<div id="styleMenu" style="display:none">
+						  <div onclick="closeStyleMenu()" class="w3-closenav w3-large">X</div>
+						  <div onclick="changeActiveStyleSheet('default');" id="blackStyleSelector"></div>		
+						  <div onclick="changeActiveStyleSheet('red');" id="redStyleSelector"></div>		
+						  <div onclick="changeActiveStyleSheet('orange');" id="orangeStyleSelector"></div>				
+					</div>
+				</div>
+				<div  id="content" ></div>
+			</div>
+			
+			<footer class="w3-container w3-black w3-center">
+			   <div>ITEC1 Ganeshanathan Sukirthan 2015</div>
+			</footer>
+	
+	</body>
+</html>

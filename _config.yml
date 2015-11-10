@@ -1,0 +1,4 @@
+name: ITEC Website
+markdown: redcarpet
+pygments: true
+baseurl: /ITEC_WEBSITE

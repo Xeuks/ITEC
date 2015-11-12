@@ -11,7 +11,6 @@ function changeActiveStyleSheet(title) {
 
 function applyStartStyleSheet()
 {
-	$.cookie("currentStyle",'default');
 	console.log($.cookie("currentStyle"));
 	activateStyleSheet($.cookie("currentStyle"));
 }

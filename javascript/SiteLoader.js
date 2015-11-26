@@ -1,4 +1,5 @@
 function loadSite(site){
+console.log(site);
 	var siteToLoad = '404.html';
 	var onLoad = function(){};
 	switch(site)
@@ -17,11 +18,9 @@ function loadSite(site){
 			break;
 			
 		case 'Ajax':
-			siteToLoad = "Ajax.html"
-			break;
-			
 		case 'Form':
-			siteToLoad = "Form.html"
+		case 'ProcessLogin':
+			siteToLoad = site + ".html"
 			break;
 	}
 	
